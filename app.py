@@ -58,11 +58,25 @@ with st.container():
 
     user_input = st.text_area("💬 Your Text", height=150, placeholder="Eg: Bonjour, comment ça va?")
 
-    if st.button("🔍 Detect Language"):
-        if user_input.strip():
-            lang = predict_language(user_input)
-            st.success(f"🎉 Detected Language: **{lang}**")
-        else:
-            st.warning("⚠️ Please enter some text.")
+if st.button("🔍 Detect Language"):
+    if user_input.strip():
+        lang = predict_language(user_input)
+        st.markdown(f"""
+        <div style="
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);">
+            🎉 Detected Language: <span style="color:#059669;">{lang}</span>
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        st.warning("⚠️ Please enter some text.")
+
 
     st.markdown("</div>", unsafe_allow_html=True)
