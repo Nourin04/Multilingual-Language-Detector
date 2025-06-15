@@ -11,22 +11,25 @@ label_encoder = joblib.load("label_encoder.pkl")
 st.markdown(
     """
     <style>
-    body {
-        background-image: url('https://images.unsplash.com/photo-1494435658045-a657e4a01bcc?q=80&w=1462&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    .stApp {
+        background-image: url("https://images.unsplash.com/photo-1494435658045-a657e4a01bcc?q=80&w=1462&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
     }
-    .main {
-        background-color: rgba(255, 255, 255, 0.9);
+    .main-container {
+        background-color: rgba(255, 255, 255, 0.85);
         padding: 2rem;
         border-radius: 1rem;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        margin: 2rem auto;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        max-width: 800px;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # 🧹 Clean text
 def clean_text(text):
