@@ -12,7 +12,7 @@ st.markdown(
     """
     <style>
     body {
-        background-image: url('https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-image: url('https://images.unsplash.com/photo-1494435658045-a657e4a01bcc?q=80&w=1462&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
