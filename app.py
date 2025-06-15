@@ -18,7 +18,7 @@ st.markdown(
         background-repeat: no-repeat;
     }
     .main-container {
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(255, 255, 255, 0.08);
         padding: 2rem;
         border-radius: 1rem;
         margin: 2rem auto;
