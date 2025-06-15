@@ -3,7 +3,6 @@
 
 This project is a **Multilingual Language Detector** that can identify text written in any of **17 different languages** using Natural Language Processing (NLP) techniques and machine learning model **SVM**
 
-### ✅ Live Demo
 
 🚀 Try it live here: [**Deployed App Link**](https://multilingual-language-detector.streamlit.app/) 
 ---
