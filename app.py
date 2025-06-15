@@ -80,9 +80,9 @@ with st.container():
     st.markdown("<div class='glass'>", unsafe_allow_html=True)
 
     st.markdown("### 🌍 Multilingual Language Detector")
-    st.markdown("Detect the language of your text from **17 global languages**. Just type a sentence below! 💬")
+    st.markdown("Detect the language of your text from **17 global languages** 🌐")
 
-    user_input = st.text_area("✍️ Enter text here", height=120, placeholder="Eg: नमस्ते, आप कैसे हैं?")
+    user_input = st.text_area("✍️ Enter text here", height=120, placeholder="Eg: Bonjour, comment ça va?")
 
     if st.button("🔍 Detect Language"):
         if user_input.strip():
@@ -92,3 +92,4 @@ with st.container():
             st.warning("⚠️ Please enter some text.")
 
     st.markdown("</div>", unsafe_allow_html=True)
+
