@@ -30,6 +30,16 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# 📌 Sidebar: Supported Languages
+st.sidebar.title("🌐 Supported Languages")
+languages = [
+    "🇬🇧 English", "🇮🇳 Malayalam", "🇮🇳 Hindi", "🇮🇳 Tamil", "🇮🇳 Kannada",
+    "🇫🇷 French", "🇪🇸 Spanish", "🇵🇹 Portuguese", "🇮🇹 Italian", "🇷🇺 Russian",
+    "🇸🇪 Swedish", "🇳🇱 Dutch", "🇸🇦 Arabic", "🇹🇷 Turkish", "🇩🇪 German",
+    "🇩🇰 Danish", "🇬🇷 Greek"
+]
+for lang in languages:
+    st.sidebar.markdown(f"- {lang}")
 
 # 🧹 Clean text
 def clean_text(text):
@@ -54,52 +64,28 @@ with st.container():
     st.title("🌍 Multilingual Language Detector")
     st.markdown("**Detect the language of your text instantly. Supports 17 languages!**")
 
-    st.markdown("### 🌐 Supported Languages")
-    st.markdown("""
-    <div style='background-color: rgba(255,255,255,0.15); padding: 10px; border-radius: 10px; font-size: 16px;'>
-        🇬🇧 English &nbsp; • &nbsp;
-        🇮🇳 Malayalam &nbsp; • &nbsp;
-        🇮🇳 Hindi &nbsp; • &nbsp;
-        🇮🇳 Tamil &nbsp; • &nbsp;
-        🇮🇳 Kannada &nbsp; • &nbsp;
-        🇫🇷 French &nbsp; • &nbsp;
-        🇪🇸 Spanish &nbsp; • &nbsp;
-        🇵🇹 Portuguese &nbsp; • &nbsp;
-        🇮🇹 Italian &nbsp; • &nbsp;
-        🇷🇺 Russian &nbsp; • &nbsp;
-        🇸🇪 Swedish &nbsp; • &nbsp;
-        🇳🇱 Dutch &nbsp; • &nbsp;
-        🇸🇦 Arabic &nbsp; • &nbsp;
-        🇹🇷 Turkish &nbsp; • &nbsp;
-        🇩🇪 German &nbsp; • &nbsp;
-        🇩🇰 Danish &nbsp; • &nbsp;
-        🇬🇷 Greek
-    </div>
-    """, unsafe_allow_html=True)
-
     st.markdown("📥 *Type a sentence in any language:*")
 
     user_input = st.text_area("💬 Your Text", height=150, placeholder="Eg: Bonjour, comment ça va?")
 
-if st.button("🔍 Detect Language"):
-    if user_input.strip():
-        lang = predict_language(user_input)
-        st.markdown(f"""
-        <div style="
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 1.5rem;
-            border-radius: 1rem;
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #1e3a8a;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);">
-            🎉 Detected Language: <span style="color:#059669;">{lang}</span>
-        </div>
-        """, unsafe_allow_html=True)
-    else:
-        st.warning("⚠️ Please enter some text.")
-
+    if st.button("🔍 Detect Language"):
+        if user_input.strip():
+            lang = predict_language(user_input)
+            st.markdown(f"""
+            <div style="
+                background-color: rgba(255, 255, 255, 0.7);
+                padding: 1.5rem;
+                border-radius: 1rem;
+                margin-top: 2rem;
+                text-align: center;
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: #1e3a8a;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.25);">
+                🎉 Detected Language: <span style="color:#059669;">{lang}</span>
+            </div>
+            """, unsafe_allow_html=True)
+        else:
+            st.warning("⚠️ Please enter some text.")
 
     st.markdown("</div>", unsafe_allow_html=True)
