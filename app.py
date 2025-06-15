@@ -54,6 +54,29 @@ with st.container():
     st.title("🌍 Multilingual Language Detector")
     st.markdown("**Detect the language of your text instantly. Supports 17 languages!**")
 
+    st.markdown("### 🌐 Supported Languages")
+    st.markdown("""
+    <div style='background-color: rgba(255,255,255,0.15); padding: 10px; border-radius: 10px; font-size: 16px;'>
+        🇬🇧 English &nbsp; • &nbsp;
+        🇮🇳 Malayalam &nbsp; • &nbsp;
+        🇮🇳 Hindi &nbsp; • &nbsp;
+        🇮🇳 Tamil &nbsp; • &nbsp;
+        🇮🇳 Kannada &nbsp; • &nbsp;
+        🇫🇷 French &nbsp; • &nbsp;
+        🇪🇸 Spanish &nbsp; • &nbsp;
+        🇵🇹 Portuguese &nbsp; • &nbsp;
+        🇮🇹 Italian &nbsp; • &nbsp;
+        🇷🇺 Russian &nbsp; • &nbsp;
+        🇸🇪 Swedish &nbsp; • &nbsp;
+        🇳🇱 Dutch &nbsp; • &nbsp;
+        🇸🇦 Arabic &nbsp; • &nbsp;
+        🇹🇷 Turkish &nbsp; • &nbsp;
+        🇩🇪 German &nbsp; • &nbsp;
+        🇩🇰 Danish &nbsp; • &nbsp;
+        🇬🇷 Greek
+    </div>
+    """, unsafe_allow_html=True)
+
     st.markdown("📥 *Type a sentence in any language:*")
 
     user_input = st.text_area("💬 Your Text", height=150, placeholder="Eg: Bonjour, comment ça va?")
